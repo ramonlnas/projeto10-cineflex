@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Header = styled.div`
-  width: 375px;
+  width: 100%;
   height: 67px;
   position: fixed;
   left: 0px;
@@ -20,20 +20,27 @@ export const Header = styled.div`
   }
 `;
 export const Conteiner = styled.div`
-    margin-top: 67px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   p {
+    display: flex;
+    justify-content: center;
+    width: 375px;
     font-size: 24px;
     line-height: 28px;
     color: #293845;
   }
-`;
-export const ConteinerFilmes = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
+  img {
+    margin: 0 30px 12px 0;
+    width: 145px;
+    height: 209px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
 `;
