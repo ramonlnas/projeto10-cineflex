@@ -1,7 +1,7 @@
 import { Header, Conteiner } from "../Filmes/style";
 import Footer from "./Footer";
 import { Info } from "./style";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -41,7 +41,9 @@ export default function Sessao() {
             <p>{`${weekday} - ${date}`}</p>
             {showtimes.map((s) => {
               const { name, id } = s;
-              return <button key={id}>{name}</button>;
+              <Link  key={id} to ={`/sala/${id}`}>
+                return <button>{name}</button>;
+              </Link>
             })}
           </Info>
         );

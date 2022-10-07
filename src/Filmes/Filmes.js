@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Header, Conteiner } from "../Filmes/style";
 import { useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 export default function Filmes() {
   const [imagens, setImagens] = useState([]);
 
   useEffect(() => {
-    const URL = "https://mock-api.driven.com.br/api/v8/cineflex/movies";
+    const URL = "https://mock-api.driven.com.br/api/v5/cineflex/movies";
     const promise = axios.get(URL);
 
     promise.then((res) => {
@@ -28,7 +30,9 @@ export default function Filmes() {
       <Conteiner>
         <p>Selecione o Filme</p>
         {imagens.map((i) => (
-          <img key = {i.id} alt="Imagens" src={i.posterURL} />
+          <Link key = {i.id} to={`/sessao/${i.id}`}>
+            <img  alt="Imagens" src={i.posterURL} />
+          </Link>
         ))}
       </Conteiner>
     </>
