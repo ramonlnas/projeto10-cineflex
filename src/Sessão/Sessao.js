@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 export default function Sessao() {
   const { idFilme } = useParams();
   const [info, setInfo] = useState([]);
@@ -18,12 +19,9 @@ export default function Sessao() {
     promise.then((res) => {
       const { title, posterURL, days } = res.data;
       setInfo(days);
-      setFilme({posterURL, title});
+      setFilme({ posterURL, title });
     });
   }, [idFilme]);
-
-  
-  console.log(filme)
 
   return (
     <>
@@ -39,16 +37,20 @@ export default function Sessao() {
         return (
           <Info key={id}>
             <p>{`${weekday} - ${date}`}</p>
+
             {showtimes.map((s) => {
               const { name, id } = s;
-              <Link  key={id} to ={`/sala/${id}`}>
-                return <button>{name}</button>;
-              </Link>
+
+              return (
+                <Link key={id} to={`/sala/${id}`}>
+                  <button>{name}</button>
+                </Link>
+              );
             })}
           </Info>
         );
       })}
-      <Footer filme = {filme}/>
+      <Footer filme={filme} />
     </>
   );
 }
