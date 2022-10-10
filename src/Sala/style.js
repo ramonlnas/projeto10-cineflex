@@ -18,11 +18,11 @@ export const Conteiner = styled.div`
 `;
 
 export const Main = styled.main`
-   width: 375px;
-   height: 810px;
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
+  width: 375px;
+  height: 810px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const DivAssentos = styled.div`
@@ -63,7 +63,7 @@ export const Legenda = styled.div`
 export const Selecionado = styled.div`
   width: 25px;
   height: 25px;
-  background-color: #0E7D71;
+  background-color: #0e7d71;
   border: solid 1px #1aae9e;
   border-radius: 17px;
 `;
@@ -129,38 +129,33 @@ export const Reservar = styled.button`
   font-size: 18px;
   text-align: center;
   color: #ffffff;
-  margin-top: 50px;
+  margin-top: 135px;
   margin-left: 80px;
+  margin-bottom: 30px;
 `;
 
-export const Footer = styled.footer`
-   width: 100%;
-   height: 117px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: #DFE6ED;
-   border: solid 1px #9EADBA;
+export const Footer = styled.div`
+  width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe6ed;
+  border: solid 1px #9eadba;
 
-   img{
-      width: 64px;
-      height: 89px;
-      border-radius: 2px;
-      margin: 0px 15px;
-   }
+  img {
+    width: 64px;
+    height: 89px;
+    border-radius: 2px;
+    margin: 0px 15px;
+  }
 
-   h1{
-      font-size: 26px;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 30.47px;
-      color: #293845;
-   }
-   p{
-      font-size: 26px;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 30.47px;
-      color: #293845;
-   }
+  h1 {
+    font-size: 26px;
+    color: #293845;
+  }
+  p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #293845;
+  }
 `;
